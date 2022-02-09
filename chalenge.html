@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <title>chalenge</title>
+
+    <style>
+      body {
+        background-color: black;
+        color: white;
+        font-size: large;
+        text-align: center;
+      }
+
+      .ball1 {
+        background-color: yellow;
+        color: black;
+        line-height: 100px;
+        width: 100px;
+        height: 100px;
+        margin: auto;
+        border-radius: 50%;
+        margin-bottom: 20px;
+        transition: 0.3s;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>The Ball</h1>
+
+    <div class="ball1" onclick="onBall1Click()"></div>
+
+    <script>
+      var ball1Size = 100;
+      var ball2Size = 100; //part of task#2 - Size of Ball2
+      var ball2SizeStep = 50; //part of task#2 - increment/decrement of Ball2 size
+      var isBall3OnToggle = true; //part of task#3 - reflects is Ball3 text is "ON"
+
+      function onBall1Click() {
+        var elBall1 = document.querySelector(".ball1");
+        ball1Size = ball1Size + 50;
+
+        if (ball1Size === 250) {
+          elBall1.style.backgroundColor = "red";
+        }
+
+        if (ball1Size > 400) {
+          ball1Size = 100;
+        }
+
+        elBall1.innerText = ball1Size;
+        elBall1.style.width = ball1Size + "px";
+        elBall1.style.height = ball1Size + "px";
+      }
+    </script>
+
+  </body>
+</html>

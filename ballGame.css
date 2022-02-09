@@ -1,0 +1,44 @@
+body {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+.bally {
+  line-height: 100px;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  color: black;
+  margin: auto;
+  border-radius: 80%;
+  transition: 0.8s;
+}
+.ball2 {
+  line-height: 100px;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  color: black;
+  margin: auto;
+  border-radius: 80%;
+  transition: 0.8s;
+}
+.ball3 {
+  line-height: 100px;
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  color: black;
+  margin: auto;
+  border-radius: 80%;
+  transition: 0.3s;
+}
+.button {
+  border: honeydew;
+  background-color: lavender;
+  border-radius: 30px;
+  height: 20px;
+  width: 30px;
+}
