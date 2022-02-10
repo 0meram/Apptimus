@@ -11,13 +11,12 @@
     <div class="theballTitle">
       <h1>Apptimus</h1>
     </div>
-
     <form action="result.html" method="GET" id="form">
-      <label for="fname">Banner IMG URL:</label><br>
+      <label for="fname">Banner img url</label><br>
       <input type="text" id="img" name="IMG"><br>
-      <label for="lname">Redirect Link,:</label><br>
+      <label for="lname">Redirect img link</label><br>
       <input type="text" id="link" name="Link"><br><br>
-      <button type="button" onclick="createNewBanner()">
+      <button id="btn" type="button">
         Submit
       </button>
     </form>
@@ -25,9 +24,7 @@
     <a id="link-out-put">
       <img id="img-out-put" src="" alt="img" width="320" height="320">
     </a>
-
     <ul id="banners-list"></ul>
-
     <button class="button" onclick="saveLocalStorage()">
       Save
     </button>

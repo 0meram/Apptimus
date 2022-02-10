@@ -4,19 +4,22 @@ let link = document.getElementById("link");
 
 let imgOutPut = document.getElementById("img-out-put");
 let linkOutPut = document.getElementById("link-out-put");
-let idOutPut = document.getElementById("id-out-put");
-
-const storedInput = localStorage.getItem("banners-data");
 const obj = new Object();
+const buttonSubmit = document.getElementById("btn");
+buttonSubmit.addEventListener("click", myFunction);
 
 function createNewBanner(element_id, redirect_link, banner_img) {
-	imgOutPut.src = img.value;
-	linkOutPut.href = link.value;
-	obj.id = id++;
-	obj.link = link.value;
-	obj.img = img.value;
-
+	imgOutPut.src = banner_img;
+	linkOutPut.href = redirect_link;
+	obj.id = element_id++;
+	obj.link = redirect_link;
+	obj.img = banner_img;
+	
 	return obj;
+}
+
+function myFunction() {
+	createNewBanner(1, link.value, img.value);
 }
 
 const saveLocalStorage = () => {
@@ -30,7 +33,6 @@ const clearLocalStorage = () => {
 };
 
 function ResultsLoad() {
-
 	let list = document.getElementById("banners-list");
 	for (let i = 0; i < localStorage.length; i++) {
 		const obj = JSON.parse(localStorage.bannersData);
@@ -38,7 +40,7 @@ function ResultsLoad() {
 		const src = obj.img;
 		const link = obj.link;
 		const div = document.createElement("div");
-		div.innerHTML = `Id  <span style="margin:0 10px"><b> ${num} </b></span> <a href="${link}"> <img src="${src}" alt="img"></img> </a>`;
+		div.innerHTML = `</span id="${num}"> <a href="${link}"> <img src="${src}" alt="img"></img> </a>`;
 		list.appendChild(div);
 	}
 }
