@@ -1,0 +1,41 @@
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apptimus</title>
+    <link rel="styleSheet" href="apptimus.css" />
+  </head>
+
+  <body>
+    <div class="theballTitle">
+      <h1>Apptimus</h1>
+    </div>
+
+    <form action="result.html" method="GET" id="form">
+      <label for="fname">Banner IMG URL:</label><br>
+      <input type="text" id="img" name="IMG"><br>
+      <label for="lname">Redirect Link,:</label><br>
+      <input type="text" id="link" name="Link"><br><br>
+      <button type="button" onclick="createNewBanner()">
+        Submit
+      </button>
+    </form>
+    </div>
+    <a id="link-out-put">
+      <img id="img-out-put" src="" alt="img" width="320" height="320">
+    </a>
+
+    <ul id="banners-list"></ul>
+
+    <button class="button" onclick="saveLocalStorage()">
+      Save
+    </button>
+    <button class="button" onclick="clearLocalStorage()">
+      Delete all data
+    </button>
+    </div>
+  </body>
+  <script src="apptimus.js"></script>
+
+</html>
