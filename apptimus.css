@@ -6,7 +6,6 @@ body {
 }
 
 .button {
-  border: honeydew;
-  background-color: lavender;
-  border-radius: 30px;
+  background-color: rgb(76, 146, 238);
+  border-radius: 4px;
 }
